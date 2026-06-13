@@ -1,7 +1,7 @@
 # package-name
 
 <!-- Badges: replace OWNER/REPO after creating from template -->
-[![CI](https://github.com/Yasir323/REPO/actions/workflows/ci.yml/badge.svg)](https://github.com/Yasir323/REPO/actions/workflows/ci.yml)
+[![CI](https://github.com/Yasir323/python-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/Yasir323/REPO/actions/workflows/ci.yml)
 [![PyPI](https://img.shields.io/pypi/v/package-name)](https://pypi.org/project/package-name/)
 [![Python](https://img.shields.io/badge/python-3.11%2B-blue)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
