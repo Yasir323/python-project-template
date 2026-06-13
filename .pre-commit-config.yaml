@@ -1,0 +1,25 @@
+# Catch locally what CI would reject. `make install` wires these up.
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  # mypy as a local hook: runs in the project venv, so it sees real
+  # dependencies (the mirrors-mypy isolated env does not).
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy --strict
+        entry: uv run mypy
+        language: system
+        types: [python]
+        pass_filenames: false
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.6.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
